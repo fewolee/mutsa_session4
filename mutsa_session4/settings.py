@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!h&n*5vmtbrptd*0*th4uf-#xoh#g!!w(64r3ojv+66r%j$5k%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,8 +77,13 @@ WSGI_APPLICATION = 'mutsa_session4.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'poll_db',
+        'USER' : 'admin',
+        'PASSWORD' : '73287328',
+        'HOST' : 'mutsa-rds.cn2c8ueyaj72.ap-northeast-2.rds.amazonaws.com',
+        'PORT' : '3306'
+
     }
 }
 
